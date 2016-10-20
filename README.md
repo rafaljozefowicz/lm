@@ -34,6 +34,8 @@ CUDA_VISIBLE_DEVICES= python single_lm_train.py --logdir <log_dir> --mode eval_t
 tensorboard --logdir <log_dir> --port 12012
 ```
 
+Please note that this assumes the user has 8 GPUs available. Changing the CUDA_VISIBLE_DEVICES mask and --num_gpus flag to something else will work but the training will obviously be slower.
+
 
 Results can be monitored using TensorBoard, listening on port 12012.
 
